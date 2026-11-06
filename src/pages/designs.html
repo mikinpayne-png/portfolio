@@ -1,0 +1,84 @@
+    <section class="page-hero">
+      <div class="container">
+        <h1>Mes créations visuelles</h1>
+        <p class="page-sub">Au-delà du développement web, je m'intéresse également au design graphique et à la communication visuelle.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="prose prose-center reveal">
+          <p>Je réalise des visuels créatifs destinés à valoriser les marques, promouvoir les événements et transmettre efficacement des messages.</p>
+          <p>Découvrez une sélection de mes réalisations graphiques.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtrer les créations par catégorie">
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Toutes</button>
+          <button type="button" class="filter" data-filter="affiches-publicitaires" aria-pressed="false">Affiches publicitaires</button>
+          <button type="button" class="filter" data-filter="affiches-evenementielles" aria-pressed="false">Affiches événementielles</button>
+          <button type="button" class="filter" data-filter="supports" aria-pressed="false">Supports de communication</button>
+          <button type="button" class="filter" data-filter="identites" aria-pressed="false">Identité visuelle et branding</button>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <figure class="gallery-item" data-category="affiches-evenementielles">
+            <button type="button" class="gallery-open" aria-label="Agrandir : Party Giving – Christmas Friends Party">
+              <img src="img/i1.jpeg" alt="Affiche Party Giving – Christmas Friends Party" width="800" height="1200" loading="lazy" decoding="async" data-fallback>
+              <span class="artwork-placeholder" aria-hidden="true">Image du dossier img / i1.jpeg</span>
+            </button>
+            <figcaption><strong>Party Giving – Christmas Friends Party</strong><span class="artwork-category">Affiche événementielle</span><p>Affiche promotionnelle d'une fête entre amis avant Noël.</p></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="affiches-publicitaires">
+            <button type="button" class="gallery-open" aria-label="Agrandir : Joyeuses Pâques – Mikin_Dev">
+              <img src="img/i2.jpeg" alt="Visuel Joyeuses Pâques signé Mikin_Dev" width="800" height="1200" loading="lazy" decoding="async" data-fallback>
+              <span class="artwork-placeholder" aria-hidden="true">Image du dossier img / i2.jpeg</span>
+            </button>
+            <figcaption><strong>Joyeuses Pâques</strong><span class="artwork-category">Affiche publicitaire</span><p>Création de saison signée Mikin_Dev.</p></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="affiches-evenementielles">
+            <button type="button" class="gallery-open" aria-label="Agrandir : Fête de l'Indépendance – NONDJA">
+              <img src="img/i3.jpeg" alt="Affiche NONDJA pour la fête de l'Indépendance" width="800" height="1200" loading="lazy" decoding="async" data-fallback>
+              <span class="artwork-placeholder" aria-hidden="true">Image du dossier img / i3.jpeg</span>
+            </button>
+            <figcaption><strong>Fête de l'Indépendance – NONDJA</strong><span class="artwork-category">Affiche événementielle</span><p>Visuel de communication pour la célébration de la fête de l'Indépendance.</p></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="affiches-publicitaires">
+            <button type="button" class="gallery-open" aria-label="Agrandir : Fête des Mères">
+              <img src="img/i4.jpeg" alt="Visuel de la fête des Mères signé Mikin_Dev" width="800" height="1200" loading="lazy" decoding="async" data-fallback>
+              <span class="artwork-placeholder" aria-hidden="true">Image du dossier img / i4.jpeg</span>
+            </button>
+            <figcaption><strong>Fête des Mères</strong><span class="artwork-category">Affiche publicitaire</span><p>Visuel de communication pour la fête des Mères.</p></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="affiches-publicitaires">
+            <button type="button" class="gallery-open" aria-label="Agrandir : Cours de maison">
+              <img src="img/i5.jpeg" alt="Affiche de cours de maison à Agboville" width="800" height="1200" loading="lazy" decoding="async" data-fallback>
+              <span class="artwork-placeholder" aria-hidden="true">Image du dossier img / i5.jpeg</span>
+            </button>
+            <figcaption><strong>Cours de maison</strong><span class="artwork-category">Affiche publicitaire</span><p>Visuel de promotion de cours de répétition à domicile à Agboville.</p></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="affiches-publicitaires">
+            <button type="button" class="gallery-open" aria-label="Agrandir : Vêtements & divers – MIKIN SHOP">
+              <img src="img/i6.jpeg" alt="Affiche Vêtements et divers de MIKIN SHOP" width="800" height="1200" loading="lazy" decoding="async" data-fallback>
+              <span class="artwork-placeholder" aria-hidden="true">Image du dossier img / i6.jpeg</span>
+            </button>
+            <figcaption><strong>Vêtements &amp; divers – MIKIN SHOP</strong><span class="artwork-category">Affiche publicitaire</span><p>Visuel de promotion d'articles vestimentaires et accessoires.</p></figcaption>
+          </figure>
+        </div>
+
+        <p class="gallery-empty show" id="gallery-empty">
+          Les 6 visuels disponibles dans le dossier <strong>img/</strong> sont affichés ici.
+        </p>
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu de la création" hidden>
+      <button type="button" class="lb-close" aria-label="Fermer l'aperçu">&times;</button>
+      <button type="button" class="lb-prev" aria-label="Image précédente">&#8249;</button>
+      <figure class="lb-figure">
+        <img id="lb-img" src="" alt="">
+        <figcaption id="lb-caption"></figcaption>
+      </figure>
+      <button type="button" class="lb-next" aria-label="Image suivante">&#8250;</button>
+    </div>
+
+  

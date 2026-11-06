@@ -1,0 +1,69 @@
+/* ==========================================================================
+   MIKIN_DEV – Adaptation tablettes et mobiles
+   ========================================================================== */
+
+/* Portables / petites fenêtres */
+@media (max-width: 1100px) {
+  .main-nav { gap: .75rem; }
+  .main-nav ul a { padding: .5rem .55rem; font-size: .86rem; }
+}
+
+/* Tablettes et mobile : menu hamburger */
+@media (max-width: 960px) {
+  .nav-toggle { display: block; }
+
+  /* Sans JavaScript : le menu reste visible et empilé sous le logo */
+  .header-inner { flex-wrap: wrap; height: auto; min-height: var(--header-h); padding-block: .5rem; }
+  .main-nav { flex-direction: column; align-items: stretch; width: 100%; gap: .75rem; padding: .5rem 0 1rem; }
+  .main-nav ul { flex-direction: column; }
+  .main-nav ul a { display: block; padding: .8rem .5rem; font-size: 1rem; border-bottom: 1px solid var(--border); border-radius: 0; }
+  .main-nav ul a.active::after { display: none; }
+  .nav-cta { width: 100%; }
+
+  /* Avec JavaScript : menu replié par défaut */
+  .js .nav-toggle { display: block; }
+  .js .header-inner { flex-wrap: nowrap; height: var(--header-h); padding-block: 0; }
+  .js .main-nav {
+    position: absolute; top: var(--header-h); left: 0; right: 0;
+    background: #fff; border-bottom: 1px solid var(--border);
+    padding: .5rem 1.25rem 1.25rem; box-shadow: 0 12px 24px rgba(0,0,0,.08);
+    display: none;
+  }
+  .js .main-nav.open { display: flex; }
+
+  .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-photo { order: -1; }
+  .photo-frame { max-width: 320px; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid > div:first-child { grid-column: 1 / -1; }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .project-grid, .gallery { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; padding-top: 2.5rem; }
+  .btn-row .btn { width: 100%; }
+  .hero-text .btn-row { flex-direction: column; }
+  .photo-frame::before { inset: 12px -10px -12px 10px; }
+  .card { padding: 1.4rem; }
+  .card-body { padding: 1.25rem; }
+  .timeline { padding-left: 1.4rem; margin-left: .35rem; }
+  .timeline li { padding: 1rem 1.1rem; }
+  .timeline li::before { left: calc(-1.4rem - 11px); }
+  .cta-band { flex-direction: column; align-items: flex-start; }
+  .cta-band .btn { width: 100%; }
+  .filters { gap: .45rem; }
+  .filter { font-size: .8rem; padding: .5rem .85rem; }
+  .gallery { columns: 2 140px; column-gap: .75rem; }
+  .lb-prev { left: .4rem; }
+  .lb-next { right: .4rem; }
+}
+
+@media (max-width: 380px) {
+  .gallery { columns: 1; }
+  .logo { font-size: 1.2rem; }
+}
